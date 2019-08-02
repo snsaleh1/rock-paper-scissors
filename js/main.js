@@ -29,6 +29,7 @@ function init() {
   render();
 }
 
+
 function render() {
 
 }
@@ -36,3 +37,4 @@ function render() {
 function playRound() {
   console.log('clicked');
 }
+

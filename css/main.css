@@ -10,3 +10,19 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 30vmin 15vmin 30vmin;
+  grid-template-rows: 10vmin 10vmin 30vmin 10vmin;
+}
+
+main * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main button {
+  grid-column: span 3;
+}

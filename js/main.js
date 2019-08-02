@@ -3,7 +3,7 @@ const beepAudio = new Audio('http://soundbible.com/mp3/Robot_blip-Marianne_Gagno
 const shootAudio = new Audio('http://soundbible.com/mp3/shooting_star-Mike_Koenig-1132888100.mp3');
 
 /*----- app's state (variables) -----*/
-
+let scores, results, winner;
 
 /*----- cached element references -----*/
 
@@ -12,5 +12,3 @@ const shootAudio = new Audio('http://soundbible.com/mp3/shooting_star-Mike_Koeni
 
 
 /*----- functions -----*/
-
-alert('ready!')

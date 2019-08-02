@@ -55,7 +55,7 @@ function init() {
     p: 'r',
     c: 'r'
   };
-  winner = null;  // 'p', 't', 'c'
+  winner = 'p';  // 'p', 't', 'c'
   render();
 }
 
@@ -68,7 +68,7 @@ function render() {
   for (let result in results) {
     resultEls[result].borderEl.style.borderColor =
       winner === result ? 'grey' : 'white';
-    resultEls[result].imgEl.src = 
+    resultEls[result].imgEl.src = rpsLookup[results[result]].imgUrl;
   }
 }
 

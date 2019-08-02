@@ -29,6 +29,12 @@ main button {
 }
 
 #p-result, #c-result {
-  border: 3vmin solid white;
+  border: 2vmin solid white;
   border-radius: 5vmin;
+  padding: 2vmin;
 }
+
+#p-result img, #c-result img{
+  width: 100%
+}
+

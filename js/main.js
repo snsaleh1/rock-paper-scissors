@@ -12,6 +12,17 @@ const scoreEls = {
   c: document.getElementById('c-score')
 };
 
+const resultEls = {
+  p: {
+    borderEl: document.getElementById('p-result'),
+    imgEl: document.querySelector('#p-result img')
+  },
+  c: {
+    borderEl: document.getElementById('c-result'),
+    imgEl: document.querySelector('#c-result img')
+  }
+};
+
 /*----- event listeners -----*/
 document.querySelector('main button')
   .addEventListener('click', playRound);
@@ -33,12 +44,13 @@ function init() {
   render();
 }
 
-
 function render() {
   // render scores
   for (let score in scores) {
     scoreEls[score].textContent = scores[score];
   }
+  // render results
+
 }
 
 function playRound() {

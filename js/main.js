@@ -12,3 +12,22 @@ let scores, results, winner;
 
 
 /*----- functions -----*/
+init();
+
+function init() {
+  scores = {
+    p: 0,
+    t: 0,
+    c: 0
+  };
+  results = {
+    p: 'r',
+    c: 'r'
+  };
+  winner = null;  // 'p', 't', 'c'
+  render();
+}
+
+function render() {
+
+}

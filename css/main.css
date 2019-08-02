@@ -14,7 +14,7 @@ body {
 main {
   display: grid;
   grid-template-columns: 30vmin 15vmin 30vmin;
-  grid-template-rows: 10vmin 10vmin 30vmin 10vmin;
+  grid-template-rows: 10vmin 10vmin 30vmin 15vmin;
 }
 
 main * {
@@ -25,4 +25,8 @@ main * {
 
 main button {
   grid-column: span 3;
+}
+
+button {
+  margin: 2vmin;
 }

@@ -85,6 +85,7 @@ function playRound() {
   } else {
     winner = 'c';
   }
+  scores[winner]++;
   // After all impacted state has been updated, call render
   render();
 }

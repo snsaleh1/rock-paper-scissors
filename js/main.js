@@ -55,7 +55,7 @@ function init() {
     p: 'r',
     c: 'r'
   };
-  winner = 'p';  // 'p', 't', 'c'
+  winner = null;  // 'p', 't', 'c'
   render();
 }
 
@@ -68,11 +68,30 @@ function render() {
   for (let result in results) {
     resultEls[result].borderEl.style.borderColor =
       winner === result ? 'grey' : 'white';
-    resultEls[result].imgEl.src = rpsLookup[results[result]].imgUrl;
+    resultEls[result].imgEl.src =
+      rpsLookup[results[result]].imgUrl;
   }
 }
 
 function playRound() {
-  console.log('clicked');
+  // Determine results
+  results.p = getRandomRPS();
+  results.c = getRandomRPS();
+  // Determine winner
+  if (results.p === results.c) {
+    winner = 't';
+  } else if (results.c === rpsLookup[results.p].beats) {
+    winner = 'p';
+  } else {
+    winner = 'c';
+  }
+  // After all impacted state has been updated, call render
+  render();
+}
+
+function getRandomRPS() {
+  let rps = Object.keys(rpsLookup);
+  let rndIdx = Math.floor(Math.random() * rps.length);
+  return rps[rndIdx];
 }
 

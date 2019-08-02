@@ -2,6 +2,21 @@
 const beepAudio = new Audio('http://soundbible.com/mp3/Robot_blip-Marianne_Gagnon-120342607.mp3');
 const shootAudio = new Audio('http://soundbible.com/mp3/shooting_star-Mike_Koenig-1132888100.mp3');
 
+const rpsLookup = {
+  r: {
+    imgUrl: 'imgs/rock.png',
+    beats: 's'
+  },
+  p: {
+    imgUrl: 'imgs/paper.png',
+    beats: 'r'
+  },
+  s: {
+    imgUrl: 'imgs/scissors.png',
+    beats: 'p'
+  }
+};
+
 /*----- app's state (variables) -----*/
 let scores, results, winner;
 
@@ -50,7 +65,11 @@ function render() {
     scoreEls[score].textContent = scores[score];
   }
   // render results
-
+  for (let result in results) {
+    resultEls[result].borderEl.style.borderColor =
+      winner === result ? 'grey' : 'white';
+    resultEls[result].imgEl.src = 
+  }
 }
 
 function playRound() {

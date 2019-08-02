@@ -9,7 +9,8 @@ let scores, results, winner;
 
 
 /*----- event listeners -----*/
-
+document.querySelector('main button')
+  .addEventListener('click', playRound);
 
 /*----- functions -----*/
 init();
@@ -30,4 +31,8 @@ function init() {
 
 function render() {
 
+}
+
+function playRound() {
+  console.log('clicked');
 }

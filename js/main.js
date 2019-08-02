@@ -6,7 +6,11 @@ const shootAudio = new Audio('http://soundbible.com/mp3/shooting_star-Mike_Koeni
 let scores, results, winner;
 
 /*----- cached element references -----*/
-
+const scoreEls = {
+  p: document.getElementById('p-score'),
+  t: document.getElementById('t-score'),
+  c: document.getElementById('c-score')
+};
 
 /*----- event listeners -----*/
 document.querySelector('main button')
@@ -31,7 +35,10 @@ function init() {
 
 
 function render() {
-
+  // render scores
+  for (let score in scores) {
+    scoreEls[score].textContent = scores[score];
+  }
 }
 
 function playRound() {
